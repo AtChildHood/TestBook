@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hanjun.testbook.CommunityActivity"
+    android:orientation="vertical"
+    android:id="@+id/root">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.86"
+        android:id="@+id/scrollView"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:id="@+id/content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="isdgfagfdgdfgd"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:id="@+id/textView2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    >
+
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="jiayou"
+                    android:id="@+id/textView5"
+                    android:layout_below="@+id/textView2"
+                    android:layout_toLeftOf="@+id/imageView2"
+
+                    android:layout_centerVertical="true"/>
+                <MyView.RoundImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@drawable/bird1"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+        <EditText
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="在这里输入内容"
+            android:layout_toLeftOf="@+id/send"
+            android:background="@drawable/chat_text_button_selector"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@drawable/flatbutton"
+            android:textColor="@color/white"
+            android:text="发送"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/add"
+    android:src="@drawable/ic_menu_emoticons"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:id="@+id/emotion"
+        android:orientation="horizontal"
+        android:visibility="gone"
+         >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture1"
+            android:src="@mipmap/f001"
+            android:tag="/f001"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture2"
+            android:src="@mipmap/f002"
+            android:tag="/f002"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture3"
+            android:src="@mipmap/f003"
+            android:tag="/f003"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture4"
+            android:src="@mipmap/f004"
+            android:tag="/f004"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture5"
+            android:src="@mipmap/f005"
+            android:tag="/f005"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture6"
+            android:src="@mipmap/f006"
+            android:tag="/f006"
+            android:layout_marginRight="10dp"/>
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/emotion2"
+        >
+    <android.support.v4.view.ViewPager
+        android:id="@+id/emotionPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emotionPager"
+        >
+
+        </LinearLayout>
+</RelativeLayout>
+</LinearLayout>
